@@ -74,6 +74,10 @@ abstract class MemoryEntry {
     this.attributes.checkAccess(modes);
   }
 
+  boolean canRead() {
+    return this.attributes.canRead();
+  }
+
   void checkAccess(AccessMode mode) throws AccessDeniedException {
     this.attributes.checkAccess(mode);
   }
